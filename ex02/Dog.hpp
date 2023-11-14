@@ -7,7 +7,6 @@
 class Dog : public AAnimal
 {
 	private:
-		std::string	_type;
 		Brain*		_brain;
 	
 	public:

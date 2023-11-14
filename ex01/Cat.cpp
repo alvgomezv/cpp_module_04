@@ -1,7 +1,8 @@
 #include "Cat.hpp"
 
-Cat::Cat(void) : _type("Cat")
+Cat::Cat(void)
 {
+	this->_type = "Cat";
 	this->_brain = new Brain();
 	std::cout << "Cat default constructor called" << std::endl;
 	return ;
