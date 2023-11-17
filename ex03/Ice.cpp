@@ -1,34 +1,35 @@
 #include "Ice.hpp"
+#include "ICharacter.hpp"
 
 Ice::Ice(void)
 {
 	this->_type = "ice";
-	std::cout << "Ice default constructor called" << std::endl;
+	// std::cout << "Ice default constructor called" << std::endl;
 	return ;
 }
 
 Ice::Ice(const Ice& other)
 {
 	*this = other;
-	std::cout << "Ice copy constructor called" << std::endl;
+	// std::cout << "Ice copy constructor called" << std::endl;
 }
 
 Ice&	Ice::operator=(const Ice& other)
 {
 	this->_type = other._type;
-	std::cout << "Ice assignation operator called" << std::endl;
+	// std::cout << "Ice assignation operator called" << std::endl;
 	return *this;
 }
 
 Ice::~Ice(void)
 {
-	std::cout << "Ice destructor called" << std::endl;
+	// std::cout << "Ice destructor called" << std::endl;
 	return ;
 }
 
 AMateria*	Ice::clone(void) const
 {
-	return new Ice(*this);
+	return new Ice();
 }
 
 void	Ice::use(ICharacter& target)

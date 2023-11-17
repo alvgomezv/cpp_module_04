@@ -1,7 +1,7 @@
 CPP = g++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = AMateria.cpp Ice.cpp Cure.cpp Character.cpp main.cpp
+SRCS = AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = Game
 

@@ -14,5 +14,14 @@ int main(void)
 	for (int i = 0; i < 6; i++)
 		delete animals[i];
 
+	Cat *cat = new Cat();
+	cat->getBrain()->setIdea("---La vida es bella");
+	cat->getBrain()->printIdeas();
+
+	// falta el deep copy
+	Cat *cat2 = new Cat(*cat);
+	cat2->getBrain()->printIdeas();
+
+
 	return 0;
 }

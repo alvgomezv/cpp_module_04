@@ -2,20 +2,20 @@
 
 Character::Character(void)
 {
-	std::cout << "Character default constructor called" << std::endl;
+	// std::cout << "Character default constructor called" << std::endl;
 	return ;
 }
 
 Character::Character(std::string const& name) : _name(name), _inventory()
 {
-	std::cout << "Character constructor called" << std::endl;
+	// std::cout << "Character constructor called" << std::endl;
 	return ;
 }
 
 Character::Character(const Character& other)
 {
 	*this = other;
-	std::cout << "Character copy constructor called" << std::endl;
+	// std::cout << "Character copy constructor called" << std::endl;
 }
 
 Character&	Character::operator=(const Character& other)
@@ -36,9 +36,12 @@ Character::~Character(void)
 	for(int i = 0; i < 4; i++)
 	{
 		if (this->_inventory[i] != NULL)
+		{
+			// std::cout << "Deleting from inventory materia " << i << std::endl;
 			delete this->_inventory[i];
+		}
 	}
-	std::cout << "Character destructor called" << std::endl;
+	// std::cout << "Character destructor called" << std::endl;
 	return ;
 }
 
@@ -49,6 +52,9 @@ std::string const&	Character::getName(void) const
 
 void	Character::equip(AMateria* m)
 {
+	for(int i = 0; i < 4 ; ++i)
+		if (_inventory[i] == NULL && _inventory[i] == m)
+			return;
 	for(int i = 0; i < 4; i++)
 	{
 		if (this->_inventory[i] == NULL)
