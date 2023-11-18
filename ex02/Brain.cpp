@@ -26,3 +26,24 @@ Brain::~Brain(void)
 	return ;
 }
 
+void	Brain::setIdea(std::string idea)
+{
+	for (int i = 0; i < 100; i++)
+	{
+		if (this->_ideas[i] == "")
+		{
+			this->_ideas[i] = idea;
+			return ;
+		}
+	}
+}
+
+void	Brain::printIdeas(void)
+{
+	for (int i = 0; i < 100; i++)
+	{
+		if (this->_ideas[i] != "")
+			std::cout << this->_ideas[i] << std::endl;
+	}
+}
+

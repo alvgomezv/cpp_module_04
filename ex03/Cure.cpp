@@ -8,7 +8,7 @@ Cure::Cure(void)
 	return ;
 }
 
-Cure::Cure(const Cure& other)
+Cure::Cure(const Cure& other) : AMateria(other)
 {
 	*this = other;
 	// std::cout << "Cure copy constructor called" << std::endl;

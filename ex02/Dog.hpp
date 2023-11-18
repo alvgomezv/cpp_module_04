@@ -15,8 +15,9 @@ class Dog : public AAnimal
 		Dog&	operator=(const Dog& other);
 		~Dog(void);
 
-		std::string	getType(void) const;
-		void		makeSound(void) const;
+		std::string		getType(void) const;
+		void			makeSound(void) const;
+		Brain*			getBrain(void);
 };
 
 #endif

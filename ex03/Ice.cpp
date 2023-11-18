@@ -8,7 +8,7 @@ Ice::Ice(void)
 	return ;
 }
 
-Ice::Ice(const Ice& other)
+Ice::Ice(const Ice& other) : AMateria(other)
 {
 	*this = other;
 	// std::cout << "Ice copy constructor called" << std::endl;
