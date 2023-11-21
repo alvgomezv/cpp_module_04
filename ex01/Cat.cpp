@@ -18,7 +18,6 @@ Cat::Cat(const Cat& other) : Animal(other)
 Cat&	Cat::operator=(const Cat& other)
 {
 	this->_type = other._type;
-	this->_brain = new Brain(*other._brain);
 	std::cout << "Cat assignation operator called" << std::endl;
 	return *this;
 }

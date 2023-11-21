@@ -1,7 +1,6 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
-
 int main(void)
 {
 	Animal *animals[6];
@@ -20,11 +19,9 @@ int main(void)
 
 	Cat *cat2 = new Cat(*cat);
 	cat2->getBrain()->printIdeas();
-
+	
 	delete cat;
 	delete cat2;
-
-	//CHECK LEAKS
-
+	
 	return 0;
 }

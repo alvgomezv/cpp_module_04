@@ -22,6 +22,8 @@ Brain&	Brain::operator=(const Brain& other)
 
 Brain::~Brain(void)
 {
+	for (int i = 0; i < 100; i++)
+		this->_ideas[i] = "";
 	std::cout << "Brain destructor called" << std::endl;
 	return ;
 }
