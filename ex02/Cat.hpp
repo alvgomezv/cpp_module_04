@@ -15,8 +15,9 @@ class Cat : public AAnimal
 		Cat&	operator=(const Cat& other);
 		~Cat(void);
 
-		std::string	getType(void) const;
-		void		makeSound(void) const;
+		std::string		getType(void) const;
+		void			makeSound(void) const;
+		Brain*			getBrain(void);
 };
 
 #endif

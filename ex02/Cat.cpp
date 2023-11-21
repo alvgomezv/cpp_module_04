@@ -8,15 +8,17 @@ Cat::Cat(void)
 	return ;
 }
 
-Cat::Cat(const Cat& other)
+Cat::Cat(const Cat& other) : AAnimal(other)
 {
 	*this = other;
+	this->_brain = new Brain(*other._brain);
 	std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat&	Cat::operator=(const Cat& other)
 {
 	this->_type = other._type;
+	this->_brain = new Brain(*other._brain);
 	std::cout << "Cat assignation operator called" << std::endl;
 	return *this;
 }
@@ -38,3 +40,7 @@ void	Cat::makeSound(void) const
 	std::cout << "Miiiaaaaaaaaauuuu!" << std::endl;
 }
 
+Brain*	Cat::getBrain(void)
+{
+	return this->_brain;
+}

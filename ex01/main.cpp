@@ -18,10 +18,13 @@ int main(void)
 	cat->getBrain()->setIdea("---La vida es bella");
 	cat->getBrain()->printIdeas();
 
-	// falta el deep copy
 	Cat *cat2 = new Cat(*cat);
 	cat2->getBrain()->printIdeas();
 
+	delete cat;
+	delete cat2;
+
+	//CHECK LEAKS
 
 	return 0;
 }
